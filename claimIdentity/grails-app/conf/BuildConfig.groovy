@@ -47,15 +47,15 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.jboss.com/maven2/"
 
         // For shibboleth native-sp
-        mavenRepo "http://nexus.k-int.com/service/local/repositories/releases/content"
+        mavenRepo "http://nexus.k-int.com/content/repositories/releases"
         // mavenRepo "http://nexus.k-int.com/nexus-webapp-1.4.0/content/repositories/releases"
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.29'
+        runtime 'mysql:mysql-connector-java:5.1.34'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
-        test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
+        // test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
 
         // Override dodgy dependency from ldap lib in plugins below
         compile 'org.springframework.security:spring-security-ldap:3.2.5.RELEASE'
@@ -71,13 +71,14 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.9.9"
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
+        // runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
+        runtime ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 
         compile ':spring-security-core:2.0-RC4'
         compile ':spring-security-ldap:2.0-RC2'
-        compile ':spring-security-shibboleth-native-sp:2.0.0-RC2'
+        compile ':spring-security-shibboleth-native-sp:2.0.0-RC3'
 
 
 
@@ -86,5 +87,8 @@ grails.project.dependency.resolution = {
         //compile ":less-asset-pipeline:1.10.0"
         //compile ":coffee-asset-pipeline:1.8.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
+    }
+    management {
+        dependency 'org.springframework:spring-beans:4.0.7.RELEASE'
     }
 }
