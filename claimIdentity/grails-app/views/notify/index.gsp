@@ -6,5 +6,8 @@
   </head>
   <body>
     <h1>Claim identity :: notify</h1>
+    <p>
+      ${params}
+    </p>
   </body>
 </html>
