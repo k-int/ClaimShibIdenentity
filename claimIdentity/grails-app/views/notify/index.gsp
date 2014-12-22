@@ -5,6 +5,6 @@
     <title>Shib Claim Identity</title>
   </head>
   <body>
-    <h1>Claim identity</h1>
+    <h1>Claim identity :: notify</h1>
   </body>
 </html>
