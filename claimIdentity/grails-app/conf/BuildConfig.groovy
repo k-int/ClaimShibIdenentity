@@ -42,8 +42,13 @@ grails.project.dependency.resolution = {
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
+        mavenRepo "http://download.java.net/maven/2/"
+        mavenRepo "http://mvnrepository.com/artifact"
         //mavenRepo "http://repository.jboss.com/maven2/"
+
+        // For shibboleth native-sp
+        mavenRepo "http://nexus.k-int.com/service/local/repositories/releases/content"
+        // mavenRepo "http://nexus.k-int.com/nexus-webapp-1.4.0/content/repositories/releases"
     }
 
     dependencies {
@@ -51,6 +56,9 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
+
+        // Override dodgy dependency from ldap lib in plugins below
+        compile 'org.springframework.security:spring-security-ldap:3.2.5.RELEASE'
     }
 
     plugins {
@@ -66,6 +74,12 @@ grails.project.dependency.resolution = {
         runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
+
+        compile ':spring-security-core:2.0-RC4'
+        compile ':spring-security-ldap:2.0-RC2'
+        compile ':spring-security-shibboleth-native-sp:2.0.0-RC2'
+
+
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"
