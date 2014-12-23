@@ -8,6 +8,8 @@
     <h1>Claim identity :: notify</h1>
     <p>
       ${params}
+      <br/>
+      Messages: ${message}
     </p>
   </body>
 </html>
