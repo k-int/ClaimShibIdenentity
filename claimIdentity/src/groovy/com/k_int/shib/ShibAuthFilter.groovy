@@ -48,7 +48,7 @@ public class ShibAuthFilter extends org.springframework.security.web.authenticat
         }
    
         User.withTransaction { status ->
-          def existing_user = AuthCommonUser.findByUsername(request.getRemoteUser())
+          def existing_user = User.findByUsername(request.getRemoteUser())
           if ( existing_user ) {
             log.debug("User ${request.getRemoteUser()} found, all is well");
           }
