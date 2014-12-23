@@ -2,10 +2,16 @@ package com.k_int.shib
 
 import com.k_int.claimId.*;
 import org.springframework.security.core.context.SecurityContextHolder
+import javax.annotation.PostConstruct;
 
 public class ShibAuthFilter extends org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter {
 
   def grailsApplication
+
+  @PostConstruct 
+  def init() {
+    log.debug("ShibAuthFilter::init..");
+  }
 
   def getPreAuthenticatedPrincipal(javax.servlet.http.HttpServletRequest request) {
 

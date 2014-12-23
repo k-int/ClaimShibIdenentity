@@ -148,7 +148,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 ]
 
 grails.plugin.springsecurity.providerNames = ['preAuthenticatedAuthenticationProvider', 
-                                              'daoAuthenticationProvider', 
-                                              'anonymousAuthenticationProvider', 
-                                              'rememberMeAuthenticationProvider' ]
+                                              // 'daoAuthenticationProvider', 
+                                              // 'anonymousAuthenticationProvider', 
+                                              // 'rememberMeAuthenticationProvider' 
+                                             ]
 
