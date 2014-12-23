@@ -9,7 +9,8 @@ public class ShibAuthFilter extends org.springframework.security.web.authenticat
 
   def getPreAuthenticatedPrincipal(javax.servlet.http.HttpServletRequest request) {
 
-    // log.debug("ShibAuthFilter::getPreAuthenticatedPrincipal ${request}");
+    log.debug("ShibAuthFilter::getPreAuthenticatedPrincipal ${request}");
+
     def result
 
     if ( grailsApplication?.config?.authmethod=='shib' ) {

@@ -125,7 +125,8 @@ log4j.main = {
            'grails.app.conf',
            'grails.app.jobs',
            'grails.app.conf.BootStrap',
-           'edu.umn.shibboleth.sp'
+           'edu.umn.shibboleth.sp',
+           'com.k_int'
 
 }
 
