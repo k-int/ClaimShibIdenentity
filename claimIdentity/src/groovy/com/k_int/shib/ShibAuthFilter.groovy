@@ -95,6 +95,9 @@ public class ShibAuthFilter extends org.springframework.security.web.authenticat
         result = request.getRemoteUser()
       }
     }
+    else {
+      log.debug("not in shib auth mode");
+    }
   }
 
   def getPreAuthenticatedCredentials(javax.servlet.http.HttpServletRequest request) {
