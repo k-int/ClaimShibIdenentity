@@ -15,4 +15,8 @@ beans = {
   securityContextPersistenceFilter(org.springframework.security.web.context.SecurityContextPersistenceFilter){
   }
 
+  shibAuthFilter(com.k_int.shib.ShibAuthFilter){
+    grailsApplication = ref('grailsApplication')
+    authenticationManager = ref('authenticationManager')
+  }
 }
