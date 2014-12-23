@@ -28,5 +28,8 @@ class NotifyController {
       mapping.save(flush:true, failOnError:true);
       return result
     }
+    else {
+      log.debug("User was null (${user}) or params.remote (${params.remote} was null");
+    }
   }
 }
