@@ -2,6 +2,7 @@ package claimidentity
 
 import grails.plugin.springsecurity.annotation.Secured
 import org.codehaus.groovy.grails.commons.GrailsClassUtils
+import com.k_int.claimId.*;
 
 
 class NotifyController {
