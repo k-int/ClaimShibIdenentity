@@ -36,6 +36,7 @@ html * {
 	margin: 0;
 }
 
+
 body {
 	background: #ffffff;
 	color: #333333;
@@ -424,18 +425,6 @@ td, th {
 	vertical-align: top;
 }
 
-th {
-	background-color: #efefef;
-	background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
-	    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
-	color: #666666;
-	font-weight: bold;
-	line-height: 1.7em;
-	padding: 0.2em 0.6em;
-}
-
 thead th {
 	white-space: nowrap;
 }
@@ -457,14 +446,15 @@ th.sortable a {
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 1.1em;
+        text-decoration: underline!important;
 }
 
 th.asc a {
-	background-image: url(../images/skin/sorted_asc.gif);
+	background-image: url(../images/skin/sorted_asc.gif) no-repeat!important;
 }
 
 th.desc a {
-	background-image: url(../images/skin/sorted_desc.gif);
+	background-image: url(../images/skin/sorted_desc.gif) no-repeat!important;
 }
 
 .odd {
@@ -573,11 +563,6 @@ th:hover, tr:hover {
 	text-indent: 25px;
 }
 
-.ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,
-.ie7 .buttons input.delete, .ie7 .buttons input.edit, .ie7 .buttons input.save {
-	padding-left: 36px;
-}
-
 .buttons .delete {
 	background-image: url(../images/skin/database_delete.png);
 }
@@ -593,4 +578,8 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+.control-label {
+	font-weight: bold;
 }
