@@ -17,7 +17,7 @@ class NotifyController {
     if ( ( user != null ) && ( params.remote != null ) ) {
       log.debug("Got remote user notification");
       // def mapping = IdentityMapping.findByRemoteId(params.remote)
-      def mapping = IdentityMapping.findByLocaId(user.username);
+      def mapping = IdentityMapping.findByLocalId(user.username);
       
       if ( mapping == null ) {
         mapping = new IdentityMapping(localId:user.username,remoteId:params.remote)
